@@ -35,6 +35,12 @@
     if (theTextField == self.textField) {
         [theTextField resignFirstResponder];
     }
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hello World!"
+                                                      message:@"Non mais Hello World quoi."
+                                                     delegate:self // Call : (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:@"Button 2", @"Button 3", nil];
+    [message show];
     return YES;
 }
 
@@ -49,5 +55,25 @@
     
     NSString *greeting = [[NSString alloc] initWithFormat:@"Hello, %@!", nameString];
     self.Label.text = greeting;
+}
+
+
+
+// Working with UIAlertView and UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Button 1"])
+    {
+        NSLog(@"Button 1 was selected.");
+    }
+    else if([title isEqualToString:@"Button 2"])
+    {
+        NSLog(@"Button 2 was selected.");
+    }
+    else if([title isEqualToString:@"Button 3"])
+    {
+        NSLog(@"Button 3 was selected.");
+    }
 }
 @end
