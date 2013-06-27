@@ -19,6 +19,7 @@
 - (IBAction)ChangeGreeting:(id)sender;
 
 - (IBAction)facebook:(id)sender;
+- (IBAction)twitter:(id)sender;
 
 @end
 
@@ -93,42 +94,20 @@
 
 
 -(IBAction)facebook:(id)sender{
-    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-        
-        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        
-        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
-            if (result == SLComposeViewControllerResultCancelled) {
-                
-                NSLog(@"Cancelled");
-                
-            } else
-                
-            {
-                NSLog(@"Done");
-            }
-            
-            [controller dismissViewControllerAnimated:YES completion:Nil];
-        };
-        controller.completionHandler =myBlock;
-        
-        //Adding the Text to the facebook post value from iOS
-        [controller setInitialText:@"Ce site est vraiment trop bien ;)"];
-        
-        //Adding the URL to the facebook post value from iOS
-        [controller addURL:[NSURL URLWithString:@"http://www.jessygiacomoni.fr"]];
-        
-        //Adding the Text to the facebook post value from iOS
-        [controller addImage:[UIImage imageNamed:@"fb.png"]];
-        
-        [self presentViewController:controller animated:YES completion:Nil];
-        
-    }
-    else{
-        NSLog(@"UnAvailable");
-    }
-    
+    SLComposeViewController *controllerSLC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controllerSLC setInitialText:@"Trop cool mon cette app"];
+    [controllerSLC addURL:[NSURL URLWithString:@"http://www.jessygiacomoni.fr"]];
+    [controllerSLC addImage:[UIImage imageNamed:@"test.jpg"]];
+    [self presentViewController:controllerSLC animated:YES completion:Nil];
 }
 
 
+-(IBAction)twitter:(id)sender
+{
+    SLComposeViewController *controllerSLC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [controllerSLC setInitialText:@"Trop cool mon cette app"];
+    [controllerSLC addURL:[NSURL URLWithString:@"http://www.jessygiacomoni.fr"]];
+    [controllerSLC addImage:[UIImage imageNamed:@"test.jpg"]];
+    [self presentViewController:controllerSLC animated:YES completion:Nil];
+}
 @end
