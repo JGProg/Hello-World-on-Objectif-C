@@ -49,12 +49,8 @@
         [theTextField resignFirstResponder];
         self.ButtonEnter.enabled =true;
     }
-    /*UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hello World!"
-                                                      message:@"Non mais Hello World quoi."
-                                                     delegate:self // Call : (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:@"Button 2", @"Button 3", nil];
-    [message show];*/
+    // UI ALERT :)
+    /**/
     
     return YES;
 }
@@ -94,11 +90,37 @@
 
 
 -(IBAction)facebook:(id)sender{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hello World!"
+                                                      message:@"Non pourquoi tu n'as pas partagé :(."
+                                                     delegate:self // Call : (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+                            
+                            
     SLComposeViewController *controllerSLC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [controllerSLC setInitialText:@"Trop cool mon cette app"];
     [controllerSLC addURL:[NSURL URLWithString:@"http://www.jessygiacomoni.fr"]];
     [controllerSLC addImage:[UIImage imageNamed:@"test.jpg"]];
     [self presentViewController:controllerSLC animated:YES completion:Nil];
+    [controllerSLC setCompletionHandler:^(SLComposeViewControllerResult result) {
+    switch (result) {
+            case SLComposeViewControllerResultCancelled:
+                [message show];
+               
+                break;
+            case SLComposeViewControllerResultDone:
+                NSLog(@"Post Sucessful");
+                break;
+                
+            default:
+                break;
+        }
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }];
+
+
 }
 
 

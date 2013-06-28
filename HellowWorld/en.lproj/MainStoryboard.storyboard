@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="-188"/>
+            <point key="canvasLocation" x="-133" y="4"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iTv-O9-coh">
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzV-kn-ihe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="-894"/>
+            <point key="canvasLocation" x="644" y="-334"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TTI-9b-gnp">
@@ -218,35 +218,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-h4-JLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="-435"/>
+            <point key="canvasLocation" x="-117" y="-774"/>
         </scene>
     </scenes>
     <resources>
         <image name="Default.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="HelloWorldViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelloWorldViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ChangeGreeting:"/>
-                <relationship kind="action" name="facebook:"/>
-                <relationship kind="action" name="twitter:"/>
-                <relationship kind="outlet" name="ButtonEnter" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oWT-bT-ci7"/>
+        <segue reference="dhG-ig-XbS"/>
         <segue reference="dW0-CR-oQ2"/>
     </inferredMetricsTieBreakers>
 </document>

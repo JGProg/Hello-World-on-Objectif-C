@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				73B0761F177CCCFC0029BBFF /* Media.xcassets */,
-				73E23870177C5CE300B694B1 /* HellowWorld */,
+				73E23870177C5CE300B694B1 /* HelloWorld */,
 				73E23869177C5CE300B694B1 /* Frameworks */,
 				73E23868177C5CE300B694B1 /* Products */,
 			);
@@ -91,7 +91,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73E23870177C5CE300B694B1 /* HellowWorld */ = {
+		73E23870177C5CE300B694B1 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
 				73E23879177C5CE300B694B1 /* HelloWorldAppDelegate.h */,
@@ -101,6 +101,7 @@
 				73E23886177C5CE300B694B1 /* HelloWorldViewController.m */,
 				73E23871177C5CE300B694B1 /* Supporting Files */,
 			);
+			name = HelloWorld;
 			path = HellowWorld;
 			sourceTree = "<group>";
 		};
@@ -280,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HellowWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HellowWorld/HelloWorld-Info.plist";
@@ -296,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HellowWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HellowWorld/HelloWorld-Info.plist";
